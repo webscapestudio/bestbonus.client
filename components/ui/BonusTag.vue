@@ -20,9 +20,11 @@
         leave-from-class="translate-y-0 opacity-100"
         leave-to-class="translate-y-1 opacity-0"
       >
-        <PopoverPanel class="absolute z-10 top-[calc(100%+8px)]">
+        <PopoverPanel
+          class="absolute z-10 top-[calc(100%+8px)] blok w-[290px] left-1/2 -translate-x-1/2"
+        >
           <div
-            class="relative p-4 border rounded-xl border-grayLight bg-white w-80 block"
+            class="relative p-4 border rounded-xl w-full border-grayLight bg-white block"
           >
             <!-- Close -->
             <PopoverButton class="absolute right-3 top-3 p-0">
