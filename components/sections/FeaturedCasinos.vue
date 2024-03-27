@@ -1,7 +1,7 @@
 <template>
   <section class="section">
     <div class="container">
-      <h2 class="h2">Featured Casinos</h2>
+      <h2 class="h2 u">Featured Casinos</h2>
 
       <div class="items-wrap">
         <FeaturedCasinoItem v-for="item in data" :data="item" :key="item.id" />
@@ -16,12 +16,12 @@ defineProps(["data"]);
 
 <style scoped lang="scss">
 .items-wrap {
-  @apply flex flex-col gap-2 mt-10;
+  @apply flex flex-col gap-2 mt-6;
 }
 
 @screen lg {
   .items-wrap {
-    @apply gap-2 mt-8;
+    @apply gap-2 mt-5;
   }
 }
 </style>

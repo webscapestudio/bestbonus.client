@@ -1,6 +1,8 @@
 <script setup>
 const { data: page } = await useApiFetch("/pages/main-page");
 const { data: featuredCasinos } = await useApiFetch("/casinos");
+const { data: casinos } = await useApiFetch("/casinos");
+const { data: bonusCards } = await useApiFetch("/bonus_cards");
 
 useSeoMeta({
   title: () => `${page.value.title}`,
@@ -47,8 +49,44 @@ useSeoMeta({
     </div>
   </section>
 
-  <!-- Features Casino for Month -->
-
   <SectionsFeaturedCasinos :data="featuredCasinos.data" />
+  <section class="section">
+    <div class="container">
+      <h2 class="h2">Bonuses</h2>
+
+      <div
+        class="grid mt-8 grid-cols-[2fr_1fr] gap-4 items-start md:grid-cols-1 lg:mt-6"
+      >
+        <div class="flex flex-col gap-4 md:order-2">
+          <BonusCard v-for="item in bonusCards.data" :data="item" />
+        </div>
+
+        <div class="flex flex-col gap-4 md:order-1">
+          <aside class="filter rounded-md border border-grayLight p-5">
+            <h4 class="font-medium text-lg">Bonus Categories</h4>
+          </aside>
+          <aside class="filter rounded-md border border-grayLight p-5">
+            <h4 class="font-medium text-lg">Search Bonus By Casino</h4>
+
+            <input
+              class="input rounded-md border border-grayLight w-full mt-4"
+              type="text"
+              placeholder="Search by Casino"
+            />
+
+            <div class="flex flex-col mt-4 gap-2">
+              <NuxtLink
+                class="transition-colors duration-200 ease-in-out hover:text-accent"
+                :to="`/casinos/${item.slug}`"
+                v-for="item in casinos.data"
+              >
+                {{ item.title }}
+              </NuxtLink>
+            </div>
+          </aside>
+        </div>
+      </div>
+    </div>
+  </section>
   <SectionsSpacer />
 </template>
