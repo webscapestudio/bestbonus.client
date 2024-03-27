@@ -1,48 +1,48 @@
 <script setup>
 const topLinks = [
   { id: 1, title: "Write For us", link: "/" },
-  { id: 2, title: "Privacy Policy", link: "/privacy" },
-  { id: 3, title: "Terms And Conditions", link: "/terms-and-conditions" },
-  { id: 4, title: "Help Center", link: "/help" },
-  { id: 5, title: "Contact Us", link: "/contact" },
-  { id: 6, title: "About", link: "/about" },
-  { id: 7, title: "Sitemap", link: "/sitemap" },
+  { id: 2, title: "Privacy Policy", link: "/" },
+  { id: 3, title: "Terms And Conditions", link: "/" },
+  { id: 4, title: "Help Center", link: "/" },
+  { id: 5, title: "Contact Us", link: "/" },
+  { id: 6, title: "About", link: "/" },
+  { id: 7, title: "Sitemap", link: "/" },
 ];
 const links = [
   {
     id: 1,
     title: "Bonuses",
     links: [
-      { id: 1, title: "Casino Bonus Blog", link: "/casino-bonus-blog" },
-      { id: 2, title: "Exlusive bonuses", link: "/exclusive-bonuses" },
-      { id: 3, title: "No Deposit Bonus", link: "/no-deposit-bonus" },
+      { id: 1, title: "Casino Bonus Blog", link: "/" },
+      { id: 2, title: "Exlusive bonuses", link: "/" },
+      { id: 3, title: "No Deposit Bonus", link: "/" },
     ],
   },
   {
     id: 2,
     title: "Reviews",
     links: [
-      { id: 1, title: "Online Casino reviews", link: "/online-casino-reviews" },
-      { id: 2, title: "Best Online Casinos", link: "/best-online-casinos" },
-      { id: 3, title: "New Online Casinos", link: "/new-online-casinos" },
+      { id: 1, title: "Online Casino reviews", link: "/" },
+      { id: 2, title: "Best Online Casinos", link: "/" },
+      { id: 3, title: "New Online Casinos", link: "/" },
     ],
   },
   {
     id: 2,
     title: "Reviews",
     links: [
-      { id: 1, title: "Online Casino reviews", link: "/online-casino-reviews" },
-      { id: 2, title: "Best Online Casinos", link: "/best-online-casinos" },
-      { id: 3, title: "New Online Casinos", link: "/new-online-casinos" },
+      { id: 1, title: "Online Casino reviews", link: "/" },
+      { id: 2, title: "Best Online Casinos", link: "/" },
+      { id: 3, title: "New Online Casinos", link: "/" },
     ],
   },
   {
     id: 2,
     title: "Reviews",
     links: [
-      { id: 1, title: "Online Casino reviews", link: "/online-casino-reviews" },
-      { id: 2, title: "Best Online Casinos", link: "/best-online-casinos" },
-      { id: 3, title: "New Online Casinos", link: "/new-online-casinos" },
+      { id: 1, title: "Online Casino reviews", link: "/" },
+      { id: 2, title: "Best Online Casinos", link: "/" },
+      { id: 3, title: "New Online Casinos", link: "/" },
     ],
   },
 ];

@@ -1,3 +1,97 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+* {
+  outline: none;
+}
+
+.h1 {
+  @apply text-[32px] font-bold leading-[120%];
+}
+
+.h2 {
+  @apply text-[28px] font-bold leading-[120%];
+}
+
+.h3 {
+  @apply text-[18px] font-bold leading-[120%];
+}
+
+.section {
+  margin-top: 140px;
+}
+
+input {
+  @apply bg-white px-6 pt-[14px] pb-[15px] inline-block text-black rounded-[8px];
+}
+
+button {
+  @apply bg-white px-6 pt-[14px] pb-[15px] inline-block text-black text-center rounded-[8px] transition-colors duration-200 ease-out hover:opacity-90;
+}
+
+.btn {
+  @apply bg-white px-6 pt-[14px] pb-[15px] inline-block text-black text-center rounded-[8px] transition-colors duration-200 ease-out hover:opacity-90;
+
+  &.sm {
+    @apply pt-[11px] pb-[12px];
+  }
+
+  &-success {
+    @apply bg-green text-white;
+  }
+}
+
+.link__inline {
+  @apply text-accent transition-colors duration-200 ease-in-out hover:text-red-800;
+}
+
+@screen lg {
+  .h1 {
+    @apply text-[28px];
+  }
+
+  .h2 {
+    @apply text-[28px];
+  }
+
+  .h3 {
+    @apply text-[18px];
+  }
+
+  .section {
+    margin-top: 96px;
+  }
+}
+
+@screen md {
+  .h1 {
+    @apply text-[24px];
+  }
+
+  .h2 {
+    @apply text-[28px];
+  }
+
+  .h3 {
+    @apply text-[18px];
+  }
+
+  .section {
+    margin-top: 64px;
+  }
+}
+
+@screen sm {
+  .h1 {
+    @apply text-[24px];
+  }
+
+  .h2 {
+    @apply text-[28px];
+  }
+
+  .h3 {
+    @apply text-[18px];
+  }
+}
