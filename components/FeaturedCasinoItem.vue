@@ -15,7 +15,7 @@
         />
       </div>
       <h3
-        class="ml-5 text-xl font-medium w-[340px] leading-[120%] lg:text-lg sm:w-full sm:text-center sm:ml-0"
+        class="ml-5 text-xl font-medium w-[340px] leading-[120%] lg:text-lg sm:w-full sm:text-center sm:ml-0 sm:mt-4"
       >
         <NuxtLink :to="`/casino/${data.slug}`"> {{ data.title }}</NuxtLink>
       </h3>
