@@ -130,4 +130,10 @@ useSeoMeta({
     </div>
   </section>
   <SectionsSpacer />
+
+  <Subscribe
+    class="mt-32"
+    title="Awesome Bonuses,<br> New Casinos, and Much More!"
+    description="Subscribe now to TopBonuse's free newsletter to be updated with the best bonus offers on our website, latest casinos and a selection of gambling related news & guides!"
+  />
 </template>
