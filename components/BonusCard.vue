@@ -39,6 +39,7 @@ const copy = (bonuscode) => {
           </div>
 
           <div
+            v-if="useDateFromToday(data.expired_date) > 0"
             class="ml-auto flex items-center gap-1 sm:ml-0 sm:absolute sm:top-4 sm:right-4 sm:bg-green sm:text-white sm:py-1 sm:ps-2 sm:pe-3 sm:rounded-[4px]"
           >
             <svg
@@ -56,8 +57,15 @@ const copy = (bonuscode) => {
             </svg>
 
             <div class="text-green leading-[100%] sm:text-white">
-              Expires in: {{ data.expired_date }}
+              Expires in: {{ useDateFromToday(data.expired_date) }} days
             </div>
+          </div>
+
+          <div
+            v-else
+            class="ml-auto flex items-center gap-1 sm:ml-0 sm:absolute sm:top-4 sm:right-4 sm:bg-green sm:text-white sm:py-1 sm:ps-2 sm:pe-3 sm:rounded-[4px]"
+          >
+            <div class="text-red-600 leading-[100%] sm:text-white">Expired</div>
           </div>
         </div>
 
