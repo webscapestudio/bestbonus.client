@@ -6,6 +6,8 @@
   outline: none;
 }
 
+@import "./content.scss";
+
 .h1 {
   @apply text-[32px] font-bold leading-[120%];
 }
@@ -31,7 +33,7 @@ button {
 }
 
 .btn {
-  @apply bg-white px-6 pt-[14px] pb-[15px] inline-block text-black text-center rounded-[8px] transition-colors duration-200 ease-out hover:opacity-90;
+  @apply bg-white px-6 pt-[14px] pb-[15px] inline-block text-black text-center rounded-[4px] transition-colors duration-200 ease-out hover:opacity-90;
 
   &.sm {
     @apply pt-[11px] pb-[12px];

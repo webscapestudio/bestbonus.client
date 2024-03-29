@@ -15,10 +15,12 @@ const copy = (bonuscode) => {
 </script>
 
 <template>
-  <div class="border border-neutral-200 p-5 rounded-lg relative lg:p-4">
+  <div
+    class="border border-neutral-200 p-5 rounded-lg relative lg:p-4 md:p-[10px]"
+  >
     <div class="flex gap-10 lg:gap-4 md:flex-col-reverse">
       <div class="grow">
-        <NuxtLink :to="`bonuses/${data.slug}`">
+        <NuxtLink :to="`/bonuses/${data.slug}`">
           <h3 class="text-2xl font-medium md:text-xl sm:text-lg">
             {{ data.title }}
           </h3>
@@ -98,7 +100,7 @@ const copy = (bonuscode) => {
               class="grow border-b border-neutral-400 h-[1px] mt-auto mx-2"
             ></div>
             <NuxtLink
-              :to="'/bonuses/type/' + data.bonus_type.slug"
+              :to="'/bonuses/' + data.bonus_type.slug"
               class="link__inline underline leading-[100%]"
               >{{ data.bonus_type.title }}</NuxtLink
             >
@@ -137,7 +139,7 @@ const copy = (bonuscode) => {
 
       <div class="w-[300px] flex flex-col items-center lg:w-[200px] md:w-full">
         <div class="w-full rounded-lg overflow-hidden">
-          <NuxtLink to="/casino/slug" class="bg-black block">
+          <NuxtLink :to="`/casino/${data.slug}`" class="bg-black block">
             <img
               class="w-full h-auto object-contain"
               :src="data.casino_logo"

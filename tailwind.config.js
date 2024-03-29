@@ -27,6 +27,7 @@ export default {
         gray: "#71717a",
         grayLight: "#cbd5e1",
         accent: "#BC2642",
+        accentHover: "#d90c32",
         orange: "#f97316",
         green: "#16a34b",
         yellow: "#FFC91D",

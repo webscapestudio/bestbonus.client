@@ -1,0 +1,39 @@
+.content {
+  h3 {
+    @apply font-bold text-xl;
+  }
+
+  h4 {
+    @apply font-bold text-lg;
+  }
+
+  ul {
+    @apply pl-4;
+    li {
+      @apply list-disc;
+    }
+  }
+
+  ol {
+    @apply pl-4;
+    li {
+      @apply list-decimal;
+    }
+  }
+
+  a {
+    @apply text-accent relative transition-all duration-200 ease-in-out;
+    &:before {
+      content: "";
+      width: 100%;
+      height: 1px;
+      @apply bg-accent;
+      position: absolute;
+      bottom: 0;
+    }
+
+    &:hover {
+      @apply text-accentHover;
+    }
+  }
+}
