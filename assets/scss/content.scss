@@ -1,4 +1,7 @@
 .content {
+  h2 {
+    @apply text-2xl font-bold;
+  }
   h3 {
     @apply font-bold text-xl;
   }

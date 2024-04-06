@@ -12,7 +12,6 @@
       </PopoverButton>
 
       <transition
-        v-if="bonuscode"
         enter-active-class="transition duration-200 ease-out"
         enter-from-class="translate-y-1 opacity-0"
         enter-to-class="translate-y-0 opacity-100"
@@ -48,18 +47,22 @@
                 v-if="isCopyed === false"
                 @click="copy(bonuscode)"
                 class="w-full pt-[15px] pb-4 cursor-pointer text-center border-2 rounded-lg mt-2 leading-[100%] border-dashed"
+                :class="bonuscode ? '' : 'pointer-events-none'"
               >
-                {{ bonuscode }}
+                {{ bonuscode ? bonuscode : "No Code Required" }}
               </div>
 
               <div
                 v-else
+                v-if="bonuscode"
                 @click="copy(bonuscode)"
                 class="w-full pt-[15px] pb-4 bg-green text-white border-2 border-green cursor-pointer text-center rounded-lg mt-2 leading-[100%]"
               >
                 Copied to Clipboard
               </div>
             </div>
+
+            <div>{{ wagering }}</div>
 
             <p
               class="text-sm mt-2 leading-[110%]"
@@ -79,6 +82,7 @@ const props = defineProps([
   "size",
   "style",
   "title",
+  "wagering",
   "description",
   "bonuscode",
 ]);

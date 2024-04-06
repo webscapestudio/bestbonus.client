@@ -1,37 +1,22 @@
 <template>
-  <ol class="breadcrumb flex gap-2 text-sm leading-[100%] md:flex-wrap">
-    <li class="item">
-      <nuxt-link :to="'/'" class="title"> Home </nuxt-link>
+  <ul class="flex items-center gap-2">
+    <li class="transition-colors duration-200 ease-in-out hover:text-accent">
+      <NuxtLink to="/">Home</NuxtLink>
     </li>
-    <li v-for="(item, i) in crumbs" :key="i" class="flex gap-2">
-      <div>–</div>
-      <nuxt-link :to="item.to" class="title">
-        {{ item.title }}
-      </nuxt-link>
+    <li>–</li>
+    <li
+      v-if="category"
+      class="transition-colors duration-200 ease-in-out hover:text-accent"
+    >
+      <NuxtLink :to="categorySlug">{{ category }}</NuxtLink>
     </li>
-  </ol>
+    <li v-if="category">-</li>
+    <li class="text-gray">{{ pageTitle }}</li>
+  </ul>
 </template>
 
-<script>
-export default {
-  name: "Breadcrumb",
-  computed: {
-    crumbs() {
-      const pathArray = this.$route.path.split("/");
-      pathArray.shift();
-      const breadcrumbs = pathArray.reduce((breadcrumbArray, path, idx) => {
-        breadcrumbArray.push({
-          to: breadcrumbArray[idx - 1]
-            ? "/" + breadcrumbArray[idx - 1].path + "/" + path
-            : "/" + path,
-          title: path,
-        });
-        return breadcrumbArray;
-      }, []);
-      return breadcrumbs;
-    },
-  },
-};
+<script setup>
+const props = defineProps(["pageTitle", "category", "categorySlug"]);
 </script>
 
 <style lang="scss" scoped></style>

@@ -1,10 +1,8 @@
 <script setup>
 const links = [
-  { id: 1, title: "Bonuses", link: "/a" },
-  { id: 2, title: "Casinos", link: "/a" },
-  { id: 3, title: "Games", link: "/a" },
-  { id: 4, title: "News", link: "/a" },
-  { id: 5, title: "Q&A", link: "/a" },
+  { id: 1, title: "Bonuses", link: "/bonuses" },
+  { id: 2, title: "Casinos", link: "/casinos" },
+  // { id: 3, title: "Games", link: "/" },
 ];
 </script>
 

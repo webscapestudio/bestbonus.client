@@ -1,24 +1,26 @@
 <script setup>
 const { slug } = useRoute().params;
 
+const casinoSlug = slug.replace("by-", "");
+
 const { data: bonusCards } = await useApiFetch(
-  `/bonus_types/no-deposit-bonus/bonuses`
+  `/casinos/${casinoSlug}/bonuses`
 );
 
-const { data: page } = await useApiFetch("/pages/no-deposit-bonus");
+const { data: page } = await useApiFetch(`/casinos/${casinoSlug}`);
 </script>
 
 <template>
   <section class="bg-blackLight py-16 text-white lg:py-12 md:py-10">
     <div class="container">
-      <UiBreadcrumbs :pageTitle="page.title" />
+      <UiBreadcrumbs :pageTitle="page?.title" />
       <div class="flex mt-4">
         <div class="w-[600px]">
-          <h1 class="h1 uppercase">{{ page.title }}</h1>
+          <h1 class="h1 uppercase">{{ page?.title }}</h1>
           <p
             class="mt-4 text-gray"
-            v-if="page.description"
-            v-html="page.description"
+            v-if="page?.description"
+            v-html="page?.description"
           ></p>
         </div>
       </div>
@@ -27,14 +29,18 @@ const { data: page } = await useApiFetch("/pages/no-deposit-bonus");
 
   <section class="mt-36">
     <div class="container">
-      <h2 class="h2">No Deposit Bonuses</h2>
+      <h2 class="h2">{{ page.title.replace("Review", "") }} Bonus Codes</h2>
       <BonusItems :bonuses="bonusCards.data" />
     </div>
   </section>
 
   <section class="mt-36">
     <div class="container">
-      <div class="content" v-html="page.description_footer"></div>
+      <div
+        class="content"
+        v-html="page?.description_footer"
+        v-if="page?.description_footer"
+      ></div>
     </div>
   </section>
 

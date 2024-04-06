@@ -2,10 +2,10 @@
 const { slug } = useRoute().params;
 
 const { data: bonusCards } = await useApiFetch(
-  `/bonus_types/no-deposit-bonus/bonuses`
+  `/bonus_types/tournament/bonuses`
 );
 
-const { data: page } = await useApiFetch("/pages/no-deposit-bonus");
+const { data: page } = await useApiFetch("/pages/tournament");
 </script>
 
 <template>
@@ -27,7 +27,7 @@ const { data: page } = await useApiFetch("/pages/no-deposit-bonus");
 
   <section class="mt-36">
     <div class="container">
-      <h2 class="h2">No Deposit Bonuses</h2>
+      <h2 class="h2">Tournament Bonuses</h2>
       <BonusItems :bonuses="bonusCards.data" />
     </div>
   </section>
