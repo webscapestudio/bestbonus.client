@@ -28,6 +28,22 @@
         </NuxtLink>
       </div>
     </aside>
+   
+    <aside class="filter rounded-md border border-grayLight p-5">
+      <h4 class="font-medium text-lg">Software</h4>
+
+      <div class="flex flex-col mt-4 gap-2">
+        <NuxtLink
+          class="transition-colors duration-200 ease-in-out hover:text-accent"
+          active-class="text-accent"
+          :to="`/soft/${item.slug}`"
+          v-for="item in softs.data"
+        >
+          {{ item.title.replace("Review", "") }}
+        </NuxtLink>
+      </div>
+    </aside>
+
     <aside class="filter rounded-md border border-grayLight p-5">
       <h4 class="font-medium text-lg">Search Bonus By Casino</h4>
 
@@ -49,20 +65,6 @@
       </div>
     </aside>
 
-    <aside class="filter rounded-md border border-grayLight p-5">
-      <h4 class="font-medium text-lg">Software</h4>
-
-      <div class="flex flex-col mt-4 gap-2">
-        <NuxtLink
-          class="transition-colors duration-200 ease-in-out hover:text-accent"
-          active-class="text-accent"
-          :to="`/soft/${item.slug}`"
-          v-for="item in softs.data"
-        >
-          {{ item.title.replace("Review", "") }}
-        </NuxtLink>
-      </div>
-    </aside>
   </div>
 </template>
 

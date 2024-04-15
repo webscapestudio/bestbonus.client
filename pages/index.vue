@@ -6,15 +6,8 @@ const { data: bonusCards } = await useApiFetch("/bonus_cards");
 const { data: categories } = await useApiFetch("/categories");
 const { data: bonusTypes } = await useApiFetch("/bonus_types");
 
-// const { data: searchResult } = await useApiFetch("/search?search");
 
 const searchVal = ref("");
-
-// const handleSearch = async () => {
-//   const { data: searchResult } = await useApiFetch(
-//     `/search?search=${searchVal.value}`
-//   );
-// };
 
 const searchStore = useMultiSearchStore();
 
@@ -130,7 +123,6 @@ useSeoMeta({
 
           <div v-for="item in searchStore.list.casinos">
             <pre>
-
               {{ item }}
             </pre>
           </div>

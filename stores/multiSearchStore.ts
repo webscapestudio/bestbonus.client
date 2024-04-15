@@ -19,7 +19,6 @@ export const useMultiSearchStore = defineStore("multiSearchStore", {
         this.list.push(data.value);
       }
       this.isLoading = false;
-      console.log(this.list, "asd");
     },
   },
 });

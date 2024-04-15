@@ -144,7 +144,7 @@ const copy = (bonuscode) => {
 
                 <div class="flex gap-2 ml-auto sm:ml-0">
                   <NuxtLink
-                    :to="'casinos/' + item.slug"
+                    :to="'/casinos/' + item.slug"
                     class="leading-[100%] rounded-[2px] pt-2 pb-[9px] px-6 bg-neutral-300"
                     >Review
                   </NuxtLink>
